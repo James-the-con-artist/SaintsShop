@@ -9,10 +9,6 @@
     <form action="/post/save" method="post">
       <form>
         <div class="form-group">
-          <label for="testMode.id">ID</label>
-          <input type="text" class="form-control" id="testMode.id" name="id" value="${postModel.id}">
-        </div>
-        <div class="form-group">
           <label for="testMode.name">NAME</label>
           <input type="text" class="form-control" id="testMode.name" name="name"  value="${postModel.name}">
         </div>
