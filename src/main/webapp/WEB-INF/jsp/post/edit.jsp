@@ -9,9 +9,13 @@
     <form action="/post/save" method="post">
       <form>
         <div class="form-group">
-          <label for="testMode.name">NAME</label>
-          <input type="text" class="form-control" id="testMode.name" name="name"  value="${postModel.name}">
+            <label for="testMode.name">NAME</label>
+            <input type="text" class="form-control" id="testMode.name" name="name"  value="${postModel.name}">
         </div>
+        <div class = "form-group">
+            <label for="testMode.price">PRICE</label>
+            <input type="text" class="form-control" id="testMode.price" name="price"  value="${postModel.price}">
+         </div>
         <button type="button" class="btn btn-default" onclick="javascript:window.history.back();">BACK</button>
         <button type="submit" class="btn btn-primary">SAVE</button>
       </form>

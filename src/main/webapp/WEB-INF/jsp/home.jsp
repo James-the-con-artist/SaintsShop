@@ -25,7 +25,7 @@
                                     <div class="card-body" style="padding: 4px;">
                                         <div>${postModel.name}</div>
                                         <div style="display: flex;justify-content: space-between;align-items: center">
-                                            <span style="color: #CC0927;font-weight: 700">$135.99</span>
+                                            <span style="color: #CC0927;font-weight: 700">$${postModel.price}</span>
                                             <span style="color: #666666;font-size: 80%">11-20</span>
                                         </div>
                                     </div>

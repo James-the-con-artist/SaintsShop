@@ -51,6 +51,7 @@
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: auto;">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 8px">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 8px" href = "/post/edit}">New Post</button>
       </form>
       <a class="nav-link" href="#">Login / Register</a>
     </div>
