@@ -1,6 +1,8 @@
 package com.james.stgeorges.post;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,17 +13,18 @@ public class PostServiceImpl {
     @Autowired
     PostRepository postRepository;
 
-    public PostModel save(PostModel model)throws Exception{
+    public Post save(Post model)throws Exception{
         model= postRepository.save(model);
         return model;
     }
 
-    public PostModel get(UUID id) throws Exception{
-        PostModel postModel = postRepository.getOne(id);
-        return postModel;
+    public Post get(UUID id) throws Exception{
+        Post post = postRepository.getOne(id);
+        return post;
     }
 
-    public List<PostModel> search(String keyword, int pageNo, int pageSize) throws Exception{
-        return postRepository.findAll();
+    public Page<Post> search( Post.ECategories categories,String keyword, Pageable page) throws Exception{
+        return postRepository.findByCategoryAndStatusAndKeyword(categories, Post.EPostStatus.PUBLISH,keyword,page);
+//        return postRepository.findAll(page);
     }
 }
