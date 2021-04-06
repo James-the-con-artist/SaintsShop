@@ -100,6 +100,20 @@ public class PostController {
         }
     }
 
+    @GetMapping("/myposts")
+    public String viewMyPosts(@PageableDefault(size = 20, direction = Sort.Direction.DESC, sort={"createdDate"}) Pageable page,
+                              Model m, HttpSession httpSession) throws  Exception{
+        User loginUser = (User) httpSession.getAttribute("loginUser");
+        if(loginUser!=null){
+            Page<Post> pageList = postService.getByUser(loginUser, page);
+            m.addAttribute("pageList", pageList);
+            m.addAttribute("pageTitle", "My Posts");
+            return "post/list";
+        }else{
+            return "redirect:/login";
+        }
+    }
+
     public String getExtensionByStringHandling(String filename) {
         if (filename != null && filename.length() > 3)
             return filename.substring(filename.lastIndexOf(".") + 1);

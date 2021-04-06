@@ -50,20 +50,24 @@
                     <%--        </li>--%>
                 </ul>
                 <c:if test="${sessionScope.loginUser!=null}">
-                <span class="nav-link mr-3" style="color: white">
-                    Welcome, ${sessionScope.loginUser.email}
-                </span>
+                     <a class="nav-link" href="<%=request.getContextPath()%>/post/myposts">My Posts</a>
+                </c:if>
+                <c:if test="${sessionScope.loginUser==null}">
+                    <a class="nav-link" href="<%=request.getContextPath()%>/login">Login / Register</a>
+                </c:if>
+                <c:if test="${sessionScope.loginUser!=null}">
+                    <a class="nav-link" href="<%=request.getContextPath()%>/logout">Logout</a>
                 </c:if>
                 <a class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-right: 8px"
                    href="/post/edit">New Post
                 </a>
+
                 <form class="form-inline my-2 my-lg-0" action="<%=request.getContextPath()%>/post/list" method="get">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="keyword"
                            style="width: auto;">
                     <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit" style="">Search
                     </button>
                 </form>
-                <a class="nav-link" href="<%=request.getContextPath()%>/login">Login / Register</a>
             </div>
         </div>
     </nav>

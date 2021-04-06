@@ -30,6 +30,12 @@
     </div>
     <div class="col-md-9 col-sm-1">
       <div class="container">
+      <c:if test="${pageTitle!=null}">
+        <div class="row text-center">
+            <h1>${pageTitle}</h1>
+        </div>
+      </c:if>
+
         <div class="row text-center">
           <nav aria-label="...">
             <ul class="pagination">
@@ -62,6 +68,7 @@
                    href="<%=request.getContextPath()%>/post/list/${category}?keyword=${keyword}&page=${pageList.nextOrLastPageable().pageNumber}">Next</a>
               </li>
               <div style="align-self: center;padding-left: 32px">Page ${pageList.number+1} of ${pageList.totalPages}</div>
+              <div style="align-self: center;padding-left: 32px">Total:${pageList.totalElements}</div>
             </ul>
 
           </nav>

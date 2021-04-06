@@ -1,9 +1,11 @@
 package com.james.stgeorges.post;
 
+import com.james.stgeorges.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import sun.jvm.hotspot.gc.z.ZPageAllocator;
 
 import java.util.List;
 import java.util.UUID;
@@ -26,5 +28,9 @@ public class PostServiceImpl {
     public Page<Post> search( Post.ECategories categories,String keyword, Pageable page) throws Exception{
         return postRepository.findByCategoryAndStatusAndKeyword(categories, Post.EPostStatus.PUBLISH,keyword,page);
 //        return postRepository.findAll(page);
+    }
+
+    public Page<Post> getByUser(User loginUser, Pageable page) throws Exception{
+        return  postRepository.findByUser(loginUser, page);
     }
 }

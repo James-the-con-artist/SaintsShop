@@ -78,4 +78,10 @@ public class UserController {
         String myHash = DatatypeConverter.printHexBinary(digest).toUpperCase();
         return myHash;
     }
+
+    @GetMapping("/logout")
+    public String logout(Model m, HttpSession httpSession){
+        httpSession.removeAttribute("loginUser");
+        return "redirect:/";
+    }
 }

@@ -16,4 +16,5 @@ public interface PostRepository extends JpaRepository<Post, UUID> {
     @Query("select p from Post p where (:category is null or p.category = :category) AND (:status is null or p.status = :status)" +
             " AND (:keyword is null or p.title like %:keyword% or p.description like %:keyword% )")
     public Page<Post> findByCategoryAndStatusAndKeyword(Post.ECategories category, Post.EPostStatus status,String keyword, Pageable page);
+    public Page<Post> findByUser(User user, Pageable page);
 }
