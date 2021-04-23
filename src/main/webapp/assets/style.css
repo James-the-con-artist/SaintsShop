@@ -1,6 +1,25 @@
-#header{
+#header {
 
 }
-#header a{
-    color:white;
+
+#header a {
+    color: white;
+}
+
+.list-group-item.active {
+    background-color: #CC0927;
+    border-color: #CC0927;
+}
+
+.btn-outline-success {
+    color: #CC0927;
+    border-color: #CC0927;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #CC0927;
+    border-color: #CC0927;
+}
+a {
+    color: #CC0927;
 }
