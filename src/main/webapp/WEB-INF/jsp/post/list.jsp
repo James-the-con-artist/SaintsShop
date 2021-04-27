@@ -8,23 +8,23 @@
         <a href="<%=request.getContextPath()%>/post/list">
           <li class="list-group-item ${category==null||category==''?"active":""}">All</li>
         </a>
-        <a href="<%=request.getContextPath()%>/post/list/UNIFORMS">
-          <li class="list-group-item ${category=='UNIFORMS'?"active":""}">Uniforms</li>
+        <a href="<%=request.getContextPath()%>/post/list/Uniform">
+          <li class="list-group-item ${category=='Uniform'?"active":""}">Uniforms</li>
         </a>
-        <a href="<%=request.getContextPath()%>/post/list/BOOKS">
-          <li class="list-group-item ${category=='BOOKS'?"active":""}">Books</li>
+        <a href="<%=request.getContextPath()%>/post/list/Books">
+          <li class="list-group-item ${category=='Books'?"active":""}">Books</li>
         </a>
-        <a href="<%=request.getContextPath()%>/post/list/ELECTRONICS">
-          <li class="list-group-item ${category=='ELECTRONICS'?"active":""}">Electronics</li>
+        <a href="<%=request.getContextPath()%>/post/list/Electronics">
+          <li class="list-group-item ${category=='Electronics'?"active":""}">Electronics</li>
         </a>
-        <a href="<%=request.getContextPath()%>/post/list/SPORTS">
-          <li class="list-group-item ${category=='SPORTS'?"active":""}">Sports</li>
+        <a href="<%=request.getContextPath()%>/post/list/Sports">
+          <li class="list-group-item ${category=='Sports'?"active":""}">Sports</li>
         </a>
-        <a href="<%=request.getContextPath()%>/post/list/INSTRUMENTS">
-          <li class="list-group-item ${category=='INSTRUMENTS'?"active":""}">Instruments</li>
+        <a href="<%=request.getContextPath()%>/post/list/Instruments">
+          <li class="list-group-item ${category=='Instruments'?"active":""}">Instruments</li>
         </a>
-        <a href="<%=request.getContextPath()%>/post/list/OTHERS">
-          <li class="list-group-item ${category=='OTHERS'?"active":""}">Others</li>
+        <a href="<%=request.getContextPath()%>/post/list/Miscellaneous">
+          <li class="list-group-item ${category=='Miscellaneous'?"active":""}">Miscellaneous</li>
         </a>
       </ul>
     </div>

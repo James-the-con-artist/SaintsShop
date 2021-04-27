@@ -12,6 +12,7 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String title;
+    @Column(length = 10000)
     private String description;
     private String price;
     private Date createdDate;
@@ -28,11 +29,11 @@ public class Post {
     private String pictureUrl8;
 
     public enum EPostStatus{
-        PUBLISH,HIDDEN
+        Published,Hidden
     }
     private EPostStatus status;
     public enum ECategories{
-        BOOKS, ELECTRONICS, UNIFORMS, SPORTS, INSTRUMENTS, OTHERS
+        Books, Electronics, Uniform, Sports, Instruments, Miscellaneous
     }
     private ECategories category;
     @ManyToOne

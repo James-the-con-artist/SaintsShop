@@ -42,7 +42,7 @@
           <h1>Price: ${post.price}</h1>
           <h5>Email: <a href="mailto:${post.contactEmail}">${post.contactEmail}</a></h5>
           <h5>Phone: <a href="tel:${post.contactPhone}">${post.contactPhone}</a></h5>
-          <p>Publish By: ${post.user.email} <br/>
+          <p>Published By: ${post.user.email} <br/>
             Created: ${post.createdDateText}<br/>
             Category: ${post.category}<br/>
             Status: ${post.status}<br/>
