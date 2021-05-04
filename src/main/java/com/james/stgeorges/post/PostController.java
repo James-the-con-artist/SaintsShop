@@ -32,6 +32,9 @@ public class PostController {
         if (loginUser != null && loginUser.getUserId().equals(post.getUser().getUserId())) {
             m.addAttribute("isMyPost", true);
         }
+        if (loginUser != null && loginUser.getEmail().equals("admin@stgeorges.bc.ca")) {
+            m.addAttribute("isAdmin", true);
+        }
         return "post/detail";
 
     }
@@ -40,11 +43,15 @@ public class PostController {
     public String search(@PathVariable(name = "category",required = false) Post.ECategories category,
                          @RequestParam(required = false) String keyword,
                          @PageableDefault(size = 8, direction = Sort.Direction.DESC, sort = {"createdDate"}) Pageable page
-                         ,Model m) throws Exception {
+                         ,Model m, HttpSession httpSession) throws Exception {
         Page<Post> pageList = postService.search(category,keyword,page);
         m.addAttribute("category", category);
         m.addAttribute("keyword", keyword);
         m.addAttribute("pageList", pageList);
+        User loginUser = (User) httpSession.getAttribute("loginUser");
+        if (loginUser == null) {
+            return "redirect:/login";
+        }
         return "post/list";
     }
 
@@ -59,6 +66,19 @@ public class PostController {
             m.addAttribute("post", post);
         }
         return "post/edit";
+
+    }
+
+    @GetMapping({"/delete/{id}"})
+    public String delete(@PathVariable(required = false) UUID id, Model m, HttpSession httpSession) throws Exception {
+        User loginUser = (User) httpSession.getAttribute("loginUser");
+        if (loginUser == null) {
+            return "redirect:/login";
+        }
+        if (id != null) {
+            postService.delete(id);
+        }
+        return "redirect:/post/list";
 
     }
 

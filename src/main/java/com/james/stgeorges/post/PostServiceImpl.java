@@ -23,6 +23,10 @@ public class PostServiceImpl {
         return post;
     }
 
+    public void delete(UUID id) throws Exception{
+        postRepository.deleteById(id);
+    }
+
     public Page<Post> search( Post.ECategories categories,String keyword, Pageable page) throws Exception{
         return postRepository.findByCategoryAndStatusAndKeyword(categories, Post.EPostStatus.Published,keyword,page);
 //        return postRepository.findAll(page);

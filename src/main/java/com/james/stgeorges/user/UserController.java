@@ -50,7 +50,11 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String register(@RequestParam String email, @RequestParam String password, @RequestParam String repassword, Model m, HttpSession httpSession) throws NoSuchAlgorithmException {
+    public String register(@RequestParam String email, @RequestParam String password, @RequestParam String repassword,  @RequestParam String invitationCode,Model m, HttpSession httpSession) throws NoSuchAlgorithmException {
+        if (!invitationCode.equals("sgsmarket2021")) {
+            m.addAttribute("message", "Invalid invitation code. Please try again.");
+            return viewRegister(m);
+        }
         User existUser = userService.getByEmail(email.trim());
         if (existUser != null) {
             m.addAttribute("message", "Email is exist");

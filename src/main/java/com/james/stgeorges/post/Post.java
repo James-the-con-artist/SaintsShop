@@ -12,7 +12,7 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String title;
-    @Column(length = 10000)
+    @Column(columnDefinition = "CLOB")
     private String description;
     private String price;
     private Date createdDate;

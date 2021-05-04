@@ -1,9 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../header.jsp" %>
 <div class="row">
-<button type="button" class="btn btn-default py-2" onclick="javascript:window.history.back();">《 BACK</button>
+<button type="button" class="btn btn-default py-2" onclick="javascript:window.history.back();">《 Back</button>
   <c:if test="${isMyPost==true}">
-      <a href="/post/edit/${post.id}"  class="btn btn-primary py-2 ml-2">EDIT</a>
+      <a href="/post/edit/${post.id}"  class="btn btn-primary py-2 ml-2">Edit</a>
+  </c:if>
+  <c:if test="${isMyPost==true || isAdmin==true}">
+      <a href="/post/delete/${post.id}"  class="btn btn-primary py-2 ml-2">Delete</a>
   </c:if>
 </div>
 <div class="container">

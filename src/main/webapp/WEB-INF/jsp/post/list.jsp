@@ -68,7 +68,7 @@
                    href="<%=request.getContextPath()%>/post/list/${category}?keyword=${keyword}&page=${pageList.nextOrLastPageable().pageNumber}">Next</a>
               </li>
               <div style="align-self: center;padding-left: 32px">Page ${pageList.number+1} of ${pageList.totalPages}</div>
-              <div style="align-self: center;padding-left: 32px">Total:${pageList.totalElements}</div>
+              <div style="align-self: center;padding-left: 32px">Total: ${pageList.totalElements}</div>
             </ul>
 
           </nav>

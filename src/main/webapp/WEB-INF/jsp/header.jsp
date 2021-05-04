@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>ST.GEORGE'S SCHOOL</title>
+    <title>SgsMarket</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
@@ -18,7 +18,7 @@
 <header id="header">
     <nav class="navbar fixed-top  navbar-expand-lg" style="background-color: black">
         <div class="container">
-            <a class="navbar-brand" href="/">ST.GEORGE'S SCHOOL</a>
+            <a class="navbar-brand" href="/">Sgs Market</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation"

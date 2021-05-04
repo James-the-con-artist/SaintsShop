@@ -33,6 +33,13 @@
         <small id="inputRePasswordHelp" class="form-text text-muted">Please re-enter the same password to confirm</small>
       </div>
     </div>
+    <div class="row" style="padding-top: 16px;text-align: left">
+          <div class="col-12">
+            <label for="inputInvitationCode" class="sr-only">Ivitation Code</label>
+            <input type="password" id="inputInvitationCode"  name="invitationCode" class="form-control" placeholder="Invitation code" required>
+            <small id="inputInvitationCodeHelp" class="form-text text-muted">Please enter the invitation code</small>
+          </div>
+        </div>
     <div class="row" style="padding-top: 32px">
       <div class="col-6">
         <Button class="btn btn-lg btn-light" onclick="javascript:window.history.back();">Cancel</Button>
