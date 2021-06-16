@@ -117,6 +117,11 @@
                      value="Miscellaneous"  ${post.category=="Miscellaneous"?"checked":""}>
               <label class="form-check-label" for="Miscellaneous">Miscellaneous</label>
             </div>
+            <div class="form-check ml-3">
+             <input class="form-check-input" type="radio" name="category" id="Wanted"
+                     value="Wanted"  ${post.category=="Wanted"?"checked":""}>
+             <label class="form-check-label" for="Wanted">Wanted</label>
+            </div>
           </div>
         </div>
         <div class="form-group">

@@ -26,6 +26,9 @@
         <a href="<%=request.getContextPath()%>/post/list/Miscellaneous">
           <li class="list-group-item ${category=='Miscellaneous'?"active":""}">Miscellaneous</li>
         </a>
+        <a href="<%=request.getContextPath()%>/post/list/Wanted">
+          <li class="list-group-item ${category=='Wanted'?"active":""}">Wanted</li>
+        </a>
       </ul>
     </div>
     <div class="col-md-9 col-sm-1">

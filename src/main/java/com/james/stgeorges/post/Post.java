@@ -33,7 +33,7 @@ public class Post {
     }
     private EPostStatus status;
     public enum ECategories{
-        Books, Electronics, Uniform, Sports, Instruments, Miscellaneous
+        Books, Electronics, Uniform, Sports, Instruments, Miscellaneous, Wanted
     }
     private ECategories category;
     @ManyToOne
